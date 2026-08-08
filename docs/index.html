@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>熊谷花火大会 駐車場ガイド 2026｜第74回・8/8(土)開催</title>
+<meta name="description" content="第74回熊谷花火大会(2026年8月8日開催)の駐車場ガイド。公式有料駐車場(akippa予約制)、市街地の臨時開放駐車場、駅周辺コインパーキングを公式情報・地図情報をもとに一覧化。交通規制・出庫時間・ナビリンク付き。">
+<meta property="og:title" content="熊谷花火大会 駐車場ガイド 2026">
+<meta property="og:description" content="本日開催・第74回熊谷花火大会の駐車場を一覧化。公式駐車場の空き状況、無料開放駐車場、交通規制、ナビリンクまで。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#070b1c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎆</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+:root{
+  --bg:#070b1c; --bg2:#0b1230; --card:#101a3d; --card2:#0d1531;
+  --line:rgba(160,180,255,.14); --line2:rgba(160,180,255,.24);
+  --tx:#eef1ff; --tx2:#b8c2e8; --tx3:#8d99c9;
+  --gold:#ffc857; --gold2:#ffdf9e; --aka:#ff6d5e; --midori:#5eea9b; --ao:#7db3ff;
+  --shadow:0 10px 40px rgba(0,0,0,.45);
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+  background:
+    radial-gradient(1200px 600px at 85% -100px, rgba(80,60,180,.28), transparent 60%),
+    radial-gradient(900px 500px at -10% 0, rgba(20,90,160,.22), transparent 55%),
+    linear-gradient(180deg,#070b1c 0%,#0a1028 45%,#070b1c 100%);
+  color:var(--tx); line-height:1.75; -webkit-font-smoothing:antialiased;
+  padding-bottom:calc(64px + env(safe-area-inset-bottom));
+}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+a{color:var(--gold2)}
+img{max-width:100%}
+.serif{font-family:"Shippori Mincho B1","Noto Sans JP",serif}
+
+/* ===== hero ===== */
+header.hero{position:relative;overflow:hidden;padding:52px 0 30px;text-align:center}
+.hero .wrap{position:relative;z-index:2}
+.stars{position:absolute;inset:0;z-index:0;pointer-events:none}
+.stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.5;animation:tw 3.4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.15}50%{opacity:.75}}
+.fw{position:absolute;border-radius:50%;pointer-events:none;z-index:1;filter:blur(.4px)}
+.fw::before,.fw::after{content:"";position:absolute;inset:0;border-radius:50%}
+.fw1{left:12%;top:16%;width:150px;height:150px;background:radial-gradient(circle,rgba(255,200,87,.55) 0,rgba(255,200,87,.14) 30%,transparent 62%);animation:pop 5.5s ease-in-out infinite}
+.fw2{right:8%;top:8%;width:210px;height:210px;background:radial-gradient(circle,rgba(255,109,94,.5) 0,rgba(255,109,94,.1) 32%,transparent 62%);animation:pop 6.8s 1.4s ease-in-out infinite}
+.fw3{right:26%;top:42%;width:110px;height:110px;background:radial-gradient(circle,rgba(125,179,255,.5) 0,rgba(125,179,255,.12) 30%,transparent 62%);animation:pop 7.6s 2.6s ease-in-out infinite}
+@keyframes pop{0%,100%{transform:scale(.55);opacity:0}12%{opacity:.95;transform:scale(1)}30%{opacity:0;transform:scale(1.25)}}
+@media(prefers-reduced-motion:reduce){.fw,.stars i{animation:none;opacity:.25}}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);border:1px solid rgba(255,200,87,.4);border-radius:999px;padding:6px 16px;background:rgba(255,200,87,.07)}
+.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--aka);animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.kicker .dot{animation:none}}
+h1{font-size:clamp(30px,6.4vw,52px);line-height:1.28;margin:18px 0 6px;letter-spacing:.04em}
+h1 small{display:block;font-size:clamp(13px,2.6vw,17px);color:var(--tx2);font-weight:700;letter-spacing:.3em;margin-bottom:10px}
+h1 .gold{background:linear-gradient(180deg,#ffe9b0,#ffc857 60%,#e8a63c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.meta-line{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 4px}
+.meta-chip{font-size:13.5px;font-weight:700;color:var(--tx);background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.meta-chip b{color:var(--gold)}
+.count{margin:20px auto 0;max-width:560px;background:linear-gradient(180deg,rgba(16,26,61,.9),rgba(13,21,49,.9));border:1px solid var(--line2);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
+.count .lbl{font-size:12.5px;font-weight:700;letter-spacing:.18em;color:var(--tx3)}
+.count .val{font-size:clamp(26px,6vw,38px);font-weight:900;letter-spacing:.06em;color:var(--gold2);font-variant-numeric:tabular-nums}
+.count .sub{font-size:13px;color:var(--tx2)}
+.cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;border-radius:14px;padding:13px 22px;text-decoration:none;transition:transform .15s,box-shadow .15s;border:1px solid transparent}
+.btn:active{transform:scale(.97)}
+.btn-p{background:linear-gradient(135deg,#ffd678,#ff9a5e);color:#241303;box-shadow:0 6px 24px rgba(255,170,80,.35)}
+.btn-g{background:rgba(255,255,255,.07);color:var(--tx);border-color:var(--line2)}
+
+/* ===== live banner ===== */
+.live{margin:26px auto 0;max-width:760px;border-radius:var(--r);border:1px solid rgba(255,109,94,.45);background:linear-gradient(135deg,rgba(255,109,94,.14),rgba(255,200,87,.1));padding:14px 18px;text-align:left;display:flex;gap:12px;align-items:flex-start}
+.live .ic{font-size:22px;line-height:1.4}
+.live b{color:var(--gold2)}
+.live .t{font-size:14.5px;color:var(--tx)}
+.live .s{font-size:12.5px;color:var(--tx2);margin-top:2px}
+
+/* ===== nav ===== */
+nav.top{position:sticky;top:0;z-index:1000;background:rgba(7,11,28,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav.top .in{max-width:960px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:0 12px;scrollbar-width:none}
+nav.top .in::-webkit-scrollbar{display:none}
+nav.top a{flex:none;font-size:13.5px;font-weight:700;color:var(--tx2);text-decoration:none;padding:14px 13px;border-bottom:2px solid transparent;letter-spacing:.02em}
+nav.top a.on{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ===== sections ===== */
+section{padding:44px 0 10px}
+.sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.sec-h .no{font-family:"Shippori Mincho B1",serif;font-size:15px;color:var(--gold);letter-spacing:.2em;font-weight:800}
+h2{font-size:clamp(21px,4.6vw,28px);letter-spacing:.05em}
+.sec-d{color:var(--tx2);font-size:14.5px;margin-bottom:20px}
+h3{font-size:17px;margin:26px 0 10px;color:var(--gold2);letter-spacing:.04em}
+
+/* ===== alert cards ===== */
+.alerts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.alert{background:var(--card2);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.alert .i{font-size:24px}
+.alert b{display:block;font-size:15px;margin:6px 0 2px}
+.alert p{font-size:13px;color:var(--tx2)}
+.alert.red{border-color:rgba(255,109,94,.5)}
+.alert.red b{color:#ffb0a6}
+.alert.gold b{color:var(--gold2)}
+.alert.gold{border-color:rgba(255,200,87,.4)}
+
+/* ===== filter ===== */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 20px;position:sticky;top:49px;z-index:900;background:linear-gradient(180deg,var(--bg) 70%,transparent);padding:10px 0 14px}
+.chip{font-size:13px;font-weight:700;color:var(--tx2);background:rgba(255,255,255,.05);border:1px solid var(--line2);border-radius:999px;padding:8px 16px;cursor:pointer;transition:all .15s}
+.chip.on{color:#241303;background:linear-gradient(135deg,#ffd678,#ffb45e);border-color:transparent}
+
+/* ===== parking cards ===== */
+.lots{display:grid;gap:16px}
+.lot{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 4px 24px rgba(0,0,0,.25);position:relative;overflow:hidden}
+.lot.hide{display:none}
+.lot .head{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.badge{font-size:11.5px;font-weight:900;letter-spacing:.08em;border-radius:7px;padding:4px 9px;flex:none}
+.b-official{background:linear-gradient(135deg,#ffd678,#ffab5e);color:#241303}
+.b-free{background:rgba(94,234,155,.16);color:var(--midori);border:1px solid rgba(94,234,155,.45)}
+.b-paid{background:rgba(125,179,255,.15);color:var(--ao);border:1px solid rgba(125,179,255,.45)}
+.b-coin{background:rgba(255,255,255,.08);color:var(--tx2);border:1px solid var(--line2)}
+.st{font-size:11.5px;font-weight:900;border-radius:7px;padding:4px 9px;flex:none;letter-spacing:.06em}
+.st-few{background:rgba(255,109,94,.16);color:#ffb0a6;border:1px solid rgba(255,109,94,.5)}
+.st-full{background:rgba(255,255,255,.07);color:var(--tx3);border:1px solid var(--line)}
+.st-ok{background:rgba(94,234,155,.13);color:var(--midori);border:1px solid rgba(94,234,155,.4)}
+.lot h4{font-size:18.5px;letter-spacing:.03em;line-height:1.45;width:100%;margin-top:6px}
+.lot .addr{font-size:12.5px;color:var(--tx3);margin-top:1px}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:14px 0 4px}
+.spec{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:9px 12px}
+.spec .k{font-size:11px;font-weight:700;color:var(--tx3);letter-spacing:.1em}
+.spec .v{font-size:14px;font-weight:700;margin-top:1px}
+.spec .v small{font-weight:500;color:var(--tx2);font-size:11.5px}
+.notes{margin:12px 0 2px;padding:0;list-style:none}
+.notes li{font-size:13.5px;color:var(--tx2);padding-left:1.35em;position:relative;margin:5px 0}
+.notes li::before{content:"›";position:absolute;left:.3em;color:var(--gold);font-weight:900}
+.notes li.warn::before{content:"⚠";font-size:.85em;left:.05em;top:.12em}
+.notes li.warn{color:#ffcdc6}
+.lot .acts{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.act{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;text-decoration:none;border-radius:11px;padding:10px 16px}
+.act-nav{background:linear-gradient(135deg,#6fb2ff,#8b7bff);color:#0a0f26}
+.act-rsv{background:linear-gradient(135deg,#ffd678,#ff9a5e);color:#241303}
+.act-ln{background:rgba(255,255,255,.06);color:var(--tx);border:1px solid var(--line2)}
+
+/* ===== map ===== */
+#map{height:min(72vh,560px);border-radius:var(--r);border:1px solid var(--line2);box-shadow:var(--shadow);z-index:1;background:#0d1531}
+.map-note{font-size:12.5px;color:var(--tx3);margin-top:10px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 12px;font-size:13px;color:var(--tx2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.pin{width:13px;height:13px;border-radius:50%;border:2px solid #fff;display:inline-block}
+.leaflet-popup-content-wrapper{background:#141d42;color:var(--tx);border-radius:14px;border:1px solid var(--line2)}
+.leaflet-popup-tip{background:#141d42}
+.leaflet-popup-content{margin:12px 16px;line-height:1.6;font-family:"Noto Sans JP",sans-serif}
+.leaflet-popup-content b{color:var(--gold2)}
+.leaflet-popup-content a{color:#9ec7ff;font-weight:700}
+.leaflet-container{font:12px/1.5 "Noto Sans JP",sans-serif}
+.dmark{display:flex;align-items:center;justify-content:center;border-radius:50%;border:2.5px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.5);font-size:13px}
+
+/* ===== tables ===== */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card2)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+th{font-size:12px;letter-spacing:.08em;color:var(--tx3);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line2);white-space:nowrap;background:rgba(255,255,255,.03)}
+td{padding:11px 16px;border-bottom:1px solid var(--line);color:var(--tx2);vertical-align:top}
+td b{color:var(--tx)}
+tr:last-child td{border-bottom:none}
+td.time{font-weight:700;color:var(--gold2);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ===== timeline ===== */
+.tl{list-style:none;margin:18px 0;position:relative;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--gold),rgba(255,200,87,.1))}
+.tl li{position:relative;margin:14px 0;font-size:14px;color:var(--tx2)}
+.tl li::before{content:"";position:absolute;left:-24px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(255,200,87,.15)}
+.tl li b{color:var(--tx);font-variant-numeric:tabular-nums}
+.tl li.now{color:var(--tx)}
+.tl li.now::before{background:var(--aka);box-shadow:0 0 0 5px rgba(255,109,94,.25)}
+.tl li.now::after{content:"◀ いまここ";color:var(--aka);font-size:11.5px;font-weight:900;margin-left:8px;letter-spacing:.06em}
+
+/* ===== faq ===== */
+details{background:var(--card2);border:1px solid var(--line);border-radius:14px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;font-weight:700;font-size:14.5px;padding:15px 18px;list-style:none;display:flex;gap:10px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q";flex:none;width:24px;height:24px;border-radius:8px;background:rgba(255,200,87,.15);color:var(--gold);display:inline-flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:900}
+details p{padding:0 18px 15px 52px;font-size:14px;color:var(--tx2)}
+details[open] summary{border-bottom:1px solid var(--line)}
+details[open] p{padding-top:12px}
+
+/* ===== footer ===== */
+footer{margin-top:56px;border-top:1px solid var(--line);padding:34px 0 26px;font-size:13px;color:var(--tx3)}
+footer h4{font-size:13.5px;color:var(--tx2);letter-spacing:.1em;margin-bottom:10px}
+footer ul{list-style:none}
+footer li{margin:7px 0}
+footer a{color:#9ec7ff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.disc{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:18px 0;line-height:1.8}
+.tel{display:inline-flex;align-items:center;gap:8px;background:rgba(94,234,155,.1);border:1px solid rgba(94,234,155,.35);color:var(--midori);border-radius:12px;padding:10px 16px;font-weight:900;text-decoration:none;font-size:15px}
+
+/* ===== bottom tab (mobile) ===== */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:1200;background:rgba(10,15,35,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line2);display:flex;padding-bottom:env(safe-area-inset-bottom)}
+.tabbar a{flex:1;text-align:center;padding:9px 0 7px;text-decoration:none;color:var(--tx3);font-size:10.5px;font-weight:700;letter-spacing:.04em}
+.tabbar a .i{display:block;font-size:19px;margin-bottom:1px}
+.tabbar a.on{color:var(--gold)}
+@media(min-width:820px){.tabbar{display:none}body{padding-bottom:0}}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#241303;font-weight:900;padding:10px 16px;border-radius:0 0 10px 0;z-index:2000}
+.skip:focus{left:0}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"第74回熊谷花火大会","startDate":"2026-08-08T19:00:00+09:00","endDate":"2026-08-08T21:00:00+09:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"荒川河畔（荒川大橋下流側）","address":{"@type":"PostalAddress","addressLocality":"熊谷市","addressRegion":"埼玉県","addressCountry":"JP"}},"organizer":{"@type":"Organization","name":"一般社団法人熊谷市観光協会","url":"https://www.oideyo-kumagaya.com/"}}
+</script>
+</head>
+<body>
+<a class="skip" href="#list">本文へスキップ</a>
+
+<header class="hero">
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="fw fw1" aria-hidden="true"></div>
+  <div class="fw fw2" aria-hidden="true"></div>
+  <div class="fw fw3" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="kicker"><span class="dot" aria-hidden="true"></span>本日開催 ─ 2026.8.8 SAT</span>
+    <h1 class="serif"><small>第74回 熊谷花火大会</small><span class="gold">駐車場ガイド</span></h1>
+    <div class="meta-line">
+      <span class="meta-chip">🎆 <b>19:00–21:00</b> 打上</span>
+      <span class="meta-chip">📍 荒川河畔<small>（荒川大橋下流側）</small></span>
+      <span class="meta-chip">💥 約1万発・例年約42万人</span>
+    </div>
+    <div class="count" role="timer">
+      <div class="lbl" id="cd-label">打上開始まで</div>
+      <div class="val" id="cd-value">--:--:--</div>
+      <div class="sub">荒天時は 8/9(日) に順延（9日も不可なら中止）</div>
+    </div>
+    <div class="live" id="live-banner">
+      <span class="ic" aria-hidden="true">📢</span>
+      <div>
+        <div class="t" id="live-text"><b>開催可否は必ず当日の公式情報で確認を。</b>自動音声案内 050-3665-9671（当日10時〜）。</div>
+        <div class="s" id="live-sub">公式駐車場の予約状況（8/8 昼時点）：第1＝残りわずか ／ 第2＝完売。最新は akippa で確認してください。</div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-p" href="#list">🅿️ 駐車場リストを見る</a>
+      <a class="btn btn-g" href="#map-sec">🗺 マップで見る</a>
+    </div>
+  </div>
+</header>
+
+<nav class="top" aria-label="ページ内ナビゲーション">
+  <div class="in">
+    <a href="#now" data-spy="now">いま何時？</a>
+    <a href="#list" data-spy="list">公式駐車場</a>
+    <a href="#city" data-spy="city">市街地・無料開放</a>
+    <a href="#coin" data-spy="coin">コインP</a>
+    <a href="#map-sec" data-spy="map-sec">マップ</a>
+    <a href="#kisei" data-spy="kisei">交通規制</a>
+    <a href="#tips" data-spy="tips">満車対策・FAQ</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ NOW ============ -->
+<section id="now">
+  <div class="sec-h"><span class="no">01</span><h2 class="serif">いま動くなら ─ 今日のタイムライン</h2></div>
+  <p class="sec-d">時間帯によって「停められる場所」と「通れる道」が大きく変わります。現在時刻に合わせて確認してください。</p>
+  <ul class="tl" id="timeline">
+    <li data-t="0700"><b>7:00</b> ─ 市営本町駐車場(有料) オープン</li>
+    <li data-t="0830"><b>8:30</b> ─ 熊谷地方庁舎駐車場(無料開放) オープン。無料枠で朝から停められるのはここだけ</li>
+    <li data-t="1000"><b>10:00</b> ─ 開催可否の自動音声案内 開始（050-3665-9671）</li>
+    <li data-t="1300"><b>13:00</b> ─ 第1・第2公式有料駐車場 開場（akippa予約者のみ）</li>
+    <li data-t="1600"><b>16:00</b> ─ 会場周辺で交通規制スタート（区域により〜22:00）。河川敷ラグビー場エリアは16時まで入場禁止</li>
+    <li data-t="1715"><b>17:15</b> ─ 熊谷市役所駐車場 開放（〜22:30・混雑予想）</li>
+    <li data-t="1800"><b>18:00</b> ─ 第1公式駐車場の周辺道路が入場方向の一方通行に（〜20:00）</li>
+    <li data-t="1900"><b>19:00</b> ─ 🎆 打上開始。八木橋・イオン熊谷の駐車場が開放（〜22:00）</li>
+    <li data-t="2000"><b>20:00</b> ─ 公式駐車場 入場締切／退場開始（20時前は出庫不可）。周辺は退場方向の一方通行に</li>
+    <li data-t="2100"><b>21:00</b> ─ 終演。帰宅ラッシュ開始。熊谷駅へは「お帰りロード」(アンダーパス)経由で北口へ</li>
+    <li data-t="2230"><b>22:30</b> ─ 公式駐車場の退場期限・主要規制がおおむね終了</li>
+  </ul>
+  <div class="alerts">
+    <div class="alert red"><span class="i">🚫</span><b>路上駐車は厳禁</b><p>当日は取締りが強化され、パトロールが巡回します。河川敷会場付近への一般車進入も禁止です。</p></div>
+    <div class="alert red"><span class="i">⏳</span><b>出庫は最大2時間待ち</b><p>公式有料駐車場は20時まで出庫できず、出庫に2時間以上かかる場合があると公式が案内しています。</p></div>
+    <div class="alert gold"><span class="i">🚃</span><b>いちばん確実なのは電車</b><p>会場はJR・秩父鉄道 熊谷駅南口から徒歩約5分。公式も公共交通機関の利用を推奨しています。</p></div>
+    <div class="alert gold"><span class="i">📄</span><b>公式規制図をポケットに</b><p><a href="https://www.city.kumagaya.lg.jp/kanko/matsuri/kumagayahanabitaikai/index.files/R8koutuukisei.pdf" target="_blank" rel="noopener">交通規制図PDF</a>を開いておくと当日の迂回判断がスムーズです。</p></div>
+  </div>
+</section>
+
+<!-- ============ OFFICIAL LOTS ============ -->
+<section id="list">
+  <div class="sec-h"><span class="no">02</span><h2 class="serif">公式有料駐車場（akippa 完全事前予約制）</h2></div>
+  <p class="sec-d">大会公式の駐車場は2カ所・合計約2,000台規模。<b>駐車券は akippa での事前購入制（3,000円/台）</b>で、当日現金での駐車はできません。方面別に指定があります：<b>市街地方面→第1</b>／<b>小川町・東松山方面→第2</b>。</p>
+
+  <div class="chips" id="chips" role="group" aria-label="駐車場の絞り込み">
+    <button class="chip on" data-f="all">すべて</button>
+    <button class="chip" data-f="official">公式・予約制</button>
+    <button class="chip" data-f="free">無料開放</button>
+    <button class="chip" data-f="paid">有料（予約不要）</button>
+  </div>
+
+  <div class="lots">
+
+    <article class="lot" data-cat="official">
+      <div class="head">
+        <span class="badge b-official">公式有料・要予約</span>
+        <span class="st st-few" id="st-p1">本日昼時点：残りわずか</span>
+        <h4>第1公式有料駐車場（荒川左岸 河川敷）</h4>
+        <div class="addr">📍 熊谷市見晴町・石原地内の河川敷（上熊谷駅 徒歩約8分）｜市街地方面からの来場者向け</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">料金</div><div class="v">3,000円/台 <small>akippa前売のみ</small></div></div>
+        <div class="spec"><div class="k">入場</div><div class="v">13:00–20:00</div></div>
+        <div class="spec"><div class="k">出庫</div><div class="v">20:00–22:30 <small>20時前不可</small></div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約20分 <small>区画により異なる</small></div></div>
+      </div>
+      <ul class="notes">
+        <li>入口は「見晴公園横出入口」(13時〜)。伊勢町ふれあい公園付近、仏具屋とスーパーの交差点から土手に向かって入場</li>
+        <li>周辺道路は 18:00–20:00 入場方向のみ／20:00–22:30 退場方向のみ の一方通行</li>
+        <li>自動車学校側の出口は退場専用（20時から退場可能）</li>
+        <li>バイクは1台1,000円(現金)で直接来場OK／障がい者向け「思いやり駐車場」がA区画にあり（手帳提示・予約不要・台数限定）</li>
+        <li class="warn">未舗装・区画指定なし・再入庫不可。出庫に2時間以上かかる場合あり</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-rsv" href="https://www.akippa.com/parking/f6e9ad840b068203a0144f07f81f702b" target="_blank" rel="noopener">akippaで空き確認・予約</a>
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=36.1390,139.3718&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+        <a class="act act-ln" href="https://www.oideyo-kumagaya.com/cate-info/20939/" target="_blank" rel="noopener">公式の入出庫案内</a>
+      </div>
+    </article>
+
+    <article class="lot" data-cat="official">
+      <div class="head">
+        <span class="badge b-official">公式有料・要予約</span>
+        <span class="st st-full" id="st-p2">本日昼時点：完売</span>
+        <h4>第2公式有料駐車場（荒川右岸 河川敷・荒川大橋南側）</h4>
+        <div class="addr">📍 荒川大橋南端の信号を左折し約500m先で土手越え｜小川町・東松山方面からの来場者向け</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">料金</div><div class="v">3,000円/台 <small>akippa前売のみ</small></div></div>
+        <div class="spec"><div class="k">入場</div><div class="v">13:00–</div></div>
+        <div class="spec"><div class="k">出庫</div><div class="v">20:00– <small>20時前不可</small></div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約35分</div></div>
+      </div>
+      <ul class="notes">
+        <li>出入口は1カ所のみ。台数が少なく、例年午後の早い時間に満車になります</li>
+        <li>東松山方面からは荒川大橋南端の信号を左折 → 約500m先で土手を越えて入場</li>
+        <li class="warn">akippaでは本日昼時点で完売。予約なしでの来場は不可</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-rsv" href="https://www.akippa.com/event/kumagayahanabi" target="_blank" rel="noopener">akippaでキャンセル空き確認</a>
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=36.1316,139.3730&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ CITY LOTS ============ -->
+<section id="city">
+  <div class="sec-h"><span class="no">03</span><h2 class="serif">市街地の臨時開放・市営駐車場</h2></div>
+  <p class="sec-d">熊谷市公式ページと交通規制図に「臨時駐車場」として掲載されている市街地の駐車場です。<b>開放時間がそれぞれ異なる</b>ので必ず確認を。公式は「市街地の駐車場＋徒歩」の利用を案内しています。</p>
+  <div class="lots">
+
+    <article class="lot" data-cat="free">
+      <div class="head">
+        <span class="badge b-free">臨時開放</span><span class="st st-ok">朝8:30から使える</span>
+        <h4>熊谷地方庁舎駐車場</h4>
+        <div class="addr">📍 熊谷市末広3-9-1 付近（北大通り沿い）</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">開放時間</div><div class="v">8:30–22:00</div></div>
+        <div class="spec"><div class="k">料金</div><div class="v">無料開放 <small>公式案内に有料表記なし</small></div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約15–20分</div></div>
+      </div>
+      <ul class="notes">
+        <li>臨時駐車場の中で最も早くから停められる枠。場所取り・屋台散策を含めて早入りする人向け</li>
+        <li class="warn">22:00まで。終演後の混雑で出遅れると時間が迫るので注意</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=%E5%9F%BC%E7%8E%89%E7%9C%8C%E7%86%8A%E8%B0%B7%E5%9C%B0%E6%96%B9%E5%BA%81%E8%88%8E&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+      </div>
+    </article>
+
+    <article class="lot" data-cat="free">
+      <div class="head">
+        <span class="badge b-free">臨時開放</span><span class="st st-few">混雑予想（市公式）</span>
+        <h4>熊谷市役所駐車場</h4>
+        <div class="addr">📍 熊谷市宮町2-47-1</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">開放時間</div><div class="v">17:15–22:30</div></div>
+        <div class="spec"><div class="k">料金</div><div class="v">無料開放</div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約15–20分</div></div>
+      </div>
+      <ul class="notes">
+        <li>市公式が「混雑が予想されます」と明記。17:15の開放直後が狙い目</li>
+        <li>自転車の方はこちら：大会公式の駐輪場は市役所本庁舎の西側駐車場内</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=%E7%86%8A%E8%B0%B7%E5%B8%82%E5%BD%B9%E6%89%80&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+      </div>
+    </article>
+
+    <article class="lot" data-cat="paid">
+      <div class="head">
+        <span class="badge b-paid">有料・予約不要</span><span class="st st-ok">公式おすすめ枠</span>
+        <h4>市営本町駐車場</h4>
+        <div class="addr">📍 熊谷市本町2丁目（中山道の南側）</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">営業時間</div><div class="v">7:00–24:00</div></div>
+        <div class="spec"><div class="k">料金</div><div class="v">有料 <small>料金は現地表示を確認</small></div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約10–15分</div></div>
+      </div>
+      <ul class="notes">
+        <li>公式規制図が「公共交通機関または市営本町駐車場(有料)など市街地の駐車場を」と名指しで案内する駐車場</li>
+        <li>朝7時から24時まで営業なので、早入り・ゆっくり出庫の両方に対応しやすい</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=%E7%86%8A%E8%B0%B7%E5%B8%82%E5%96%B6%E6%9C%AC%E7%94%BA%E9%A7%90%E8%BB%8A%E5%A0%B4&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+      </div>
+    </article>
+
+    <article class="lot" data-cat="paid">
+      <div class="head">
+        <span class="badge b-paid">有料・予約不要</span><span class="st st-few">駅直結で人気</span>
+        <h4>ティアラ21駐車場</h4>
+        <div class="addr">📍 熊谷市銀座2-61（熊谷駅東側・ティアラ口直結）</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">営業時間</div><div class="v">24時間</div></div>
+        <div class="spec"><div class="k">参考料金</div><div class="v">60分200円 <small>24時間最大600円※</small></div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約10分 <small>駅南口経由</small></div></div>
+      </div>
+      <ul class="notes">
+        <li>24時間営業なので出庫時刻を気にせず、規制解除後にゆっくり帰る作戦が可能</li>
+        <li class="warn">※料金は2026年8月時点の地図サービス掲載値。当日の特別料金の可能性もあるため現地表示を必ず確認</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=%E3%83%86%E3%82%A3%E3%82%A2%E3%83%A921%20%E9%A7%90%E8%BB%8A%E5%A0%B4%20%E7%86%8A%E8%B0%B7&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+      </div>
+    </article>
+
+    <article class="lot" data-cat="free">
+      <div class="head">
+        <span class="badge b-free">臨時開放</span><span class="st st-full">開放は19時から</span>
+        <h4>八木橋百貨店駐車場</h4>
+        <div class="addr">📍 熊谷市仲町74（中山道沿い）</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">開放時間</div><div class="v">19:00–22:00</div></div>
+        <div class="spec"><div class="k">料金</div><div class="v">無料開放</div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約15–20分</div></div>
+      </div>
+      <ul class="notes">
+        <li class="warn">開放が打上開始と同時の19時から。「後半だけ観る」「送迎の待機」向けの枠です</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=%E5%85%AB%E6%9C%A8%E6%A9%8B%E7%99%BE%E8%B2%A8%E5%BA%97&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+      </div>
+    </article>
+
+    <article class="lot" data-cat="free">
+      <div class="head">
+        <span class="badge b-free">臨時開放</span><span class="st st-full">開放は19時から</span>
+        <h4>イオン熊谷駐車場</h4>
+        <div class="addr">📍 熊谷市本石2-135（中山道沿い・上熊谷駅近く）</div>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="k">開放時間</div><div class="v">19:00–22:00</div></div>
+        <div class="spec"><div class="k">料金</div><div class="v">無料開放</div></div>
+        <div class="spec"><div class="k">会場まで</div><div class="v">徒歩 約20–25分</div></div>
+      </div>
+      <ul class="notes">
+        <li class="warn">こちらも19時開放。買い物利用と分けて、花火用は指定時間内で</li>
+      </ul>
+      <div class="acts">
+        <a class="act act-nav" href="https://www.google.com/maps/dir/?api=1&destination=%E3%82%A4%E3%82%AA%E3%83%B3%E7%86%8A%E8%B0%B7%E5%BA%97&travelmode=driving" target="_blank" rel="noopener">🧭 ナビ開始</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ COIN ============ -->
+<section id="coin">
+  <div class="sec-h"><span class="no">04</span><h2 class="serif">熊谷駅周辺のコインパーキング（参考）</h2></div>
+  <p class="sec-d">駅周辺には時間貸し駐車場が多数あります（駅周辺で約100カ所規模）。夕方には満車が続出するため、<b>使うなら15時前の入庫</b>が目安。料金・満空は変動するため各サービスの最新情報を確認してください。</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>駐車場</th><th>場所</th><th>参考料金（2026年8月時点）</th><th>メモ</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>タイムズ熊谷筑波・第2・第14</b></td>
+          <td>熊谷駅 南口側 徒歩約2分</td>
+          <td>最大料金の設定あり（現地・公式検索で確認）</td>
+          <td>会場側(南口)に近い列。<a href="https://times-info.net/P11-saitama/line/L5600/S2016/" target="_blank" rel="noopener">タイムズ公式で満空確認</a></td>
+        </tr>
+        <tr>
+          <td><b>三井のリパーク 熊谷駅西口第2</b></td>
+          <td>熊谷駅 西側</td>
+          <td>24時間最大 平日900円／土日祝1,000円</td>
+          <td><a href="https://www.repark.jp/parking_user/time/result/detail/?park=REP0020820" target="_blank" rel="noopener">リパーク公式ページ</a></td>
+        </tr>
+        <tr>
+          <td><b>南口エリアの各コインP</b></td>
+          <td>筑波・桜木町ほか</td>
+          <td>相場：24時間最大600〜1,000円前後</td>
+          <td><a href="https://www.navitime.co.jp/parking/around/?node=00062583" target="_blank" rel="noopener">NAVITIMEで南口周辺を一覧</a></td>
+        </tr>
+        <tr>
+          <td><b>北口エリアの各コインP</b></td>
+          <td>銀座・筑波(北側)ほか</td>
+          <td>相場：30分200円・昼夜最大1,000円前後</td>
+          <td>帰路は北口方面が流れやすい。<a href="https://www.navitime.co.jp/parking/around/?node=00208708" target="_blank" rel="noopener">NAVITIMEで北口周辺を一覧</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="map-note">※コインパーキングの料金・空き状況は当日変動します。大会当日の特別料金が設定される場合もあるため、必ず現地の看板表示を優先してください。</p>
+</section>
+
+<!-- ============ MAP ============ -->
+<section id="map-sec">
+  <div class="sec-h"><span class="no">05</span><h2 class="serif">駐車場マップ</h2></div>
+  <p class="sec-d">ピンをタップすると詳細とナビリンクが開きます。赤い破線円は交通規制エリアの<b>目安</b>です（正確な範囲は<a href="https://www.city.kumagaya.lg.jp/kanko/matsuri/kumagayahanabitaikai/index.files/R8koutuukisei.pdf" target="_blank" rel="noopener">公式規制図PDF</a>を確認）。</p>
+  <div class="legend" aria-hidden="true">
+    <span><span class="pin" style="background:#ff6d5e"></span>会場・打上場所</span>
+    <span><span class="pin" style="background:#ffc857"></span>公式有料(予約制)</span>
+    <span><span class="pin" style="background:#5eea9b"></span>臨時開放</span>
+    <span><span class="pin" style="background:#7db3ff"></span>有料(予約不要)</span>
+    <span><span class="pin" style="background:#c9d4f6"></span>駅</span>
+  </div>
+  <div id="map" role="application" aria-label="駐車場の地図"></div>
+  <p class="map-note">※河川敷駐車場・一部施設のピン位置は公式案内をもとにした目安です。ナビは各カードの「ナビ開始」ボタン（名称検索）の利用が確実です。</p>
+</section>
+
+<!-- ============ KISEI ============ -->
+<section id="kisei">
+  <div class="sec-h"><span class="no">06</span><h2 class="serif">交通規制まとめ</h2></div>
+  <p class="sec-d">会場周辺は最大 <b>16:00〜22:00</b> の車両通行止め。規制時間は区域ごとに異なり、交通状況により変更される場合があります（出典：公式交通規制図）。</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>場所・区域</th><th>規制時間</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td><b>会場周辺（河川敷沿いの規制区域）</b></td><td class="time">16:00–22:00</td><td>車両通行止め（最長の区域。ほかに18:00–21:30／19:00–22:00／20:30–22:00の区域あり）</td></tr>
+        <tr><td><b>荒川大橋下流側の河川敷内（会場付近）</b></td><td class="time">終日</td><td>一般車両の進入禁止。ラグビー場エリアは16時まで入場禁止</td></tr>
+        <tr><td><b>桜木小学校 北側道路</b></td><td class="time">18:00–21:30</td><td>車両通行止め</td></tr>
+        <tr><td><b>第三・第四熊谷堤踏切</b></td><td class="time">20:00–22:00</td><td>車両通行止め</td></tr>
+        <tr><td><b>第六中仙道踏切 ほか周辺踏切</b></td><td class="time">19:00–22:30</td><td>車両通行止め（踏切方向への進入は20時以降禁止の箇所あり）</td></tr>
+        <tr><td><b>駅南口〜会場のアンダーパス南側</b></td><td class="time">20:30–22:00</td><td>車両通行止め →「お帰りロード」として歩行者専用に</td></tr>
+        <tr><td><b>第1公式駐車場 周辺道路</b></td><td class="time">18:00–22:30</td><td>18:00–20:00 入場方向のみ／20:00–22:30 退場方向のみの一方通行</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>帰り道のポイント</h3>
+  <ul class="notes">
+    <li>大会終了後、熊谷駅を利用する歩行者は「お帰りロード」(アンダーパス)から<b>北口へ</b>回る動線に誘導されます</li>
+    <li>公式駐車場の出庫は20時以降。ピークは21時台で、出庫に2時間以上かかる場合があります。急がないなら22時過ぎまで会場や屋台でゆっくりするのも手</li>
+    <li>ドローンの飛行は禁止（公式記録用ドローンのみ飛行）</li>
+  </ul>
+  <div class="acts" style="margin-top:16px">
+    <a class="act act-rsv" href="https://www.city.kumagaya.lg.jp/kanko/matsuri/kumagayahanabitaikai/index.files/R8koutuukisei.pdf" target="_blank" rel="noopener">📄 公式 交通規制図PDF</a>
+    <a class="act act-ln" href="https://www.city.kumagaya.lg.jp/kanko/matsuri/kumagayahanabitaikai/index.files/R8annnaizu.pdf" target="_blank" rel="noopener">会場案内図PDF</a>
+    <a class="act act-ln" href="https://www.city.kumagaya.lg.jp/kanko/matsuri/kumagayahanabitaikai/index.files/R8program.pdf" target="_blank" rel="noopener">プログラムPDF</a>
+  </div>
+</section>
+
+<!-- ============ TIPS ============ -->
+<section id="tips">
+  <div class="sec-h"><span class="no">07</span><h2 class="serif">満車だったら？ ─ プランB と FAQ</h2></div>
+  <div class="alerts" style="margin-bottom:22px">
+    <div class="alert gold"><span class="i">🔄</span><b>① akippaのキャンセル待ち</b><p>公式駐車場は前日まで無料キャンセル可のため、直前に空きが出ることがあります。<a href="https://www.akippa.com/event/kumagayahanabi" target="_blank" rel="noopener">公式駐車券ページ</a>をリロード。</p></div>
+    <div class="alert gold"><span class="i">🚉</span><b>② 近隣駅パーク&ライド</b><p>籠原・行田など高崎線の隣接駅前のコインパーキングに停めて1〜2駅だけ電車移動する方法。渋滞と出庫待ちを丸ごと回避できます（※一般的なテクニックで大会公式の案内ではありません）。</p></div>
+    <div class="alert gold"><span class="i">🕘</span><b>③ 時間をずらす</b><p>19時開放の八木橋・イオン熊谷を使って後半戦だけ観覧、または22時過ぎの規制解除後までゆっくり待つ。</p></div>
+  </div>
+  <details>
+    <summary>予約なしで公式駐車場に行ったら停められる？</summary>
+    <p>停められません。公式有料駐車場は akippa での完全事前予約制です（本日昼時点で第1は残りわずか・第2は完売）。バイクのみ1台1,000円(現金)で直接来場できます。</p>
+  </details>
+  <details>
+    <summary>何時までに着けば停められる？</summary>
+    <p>公式駐車場(予約済)は13:00開場・20:00入場締切です。市街地の無料開放は地方庁舎(8:30〜)以外は夕方以降の開放で、コインパーキングは例年夕方前に満車が目立ちます。車で行くなら15時前の到着を目安に、余裕を持って動くのがおすすめです。</p>
+  </details>
+  <details>
+    <summary>雨が降りそう。開催されるかどうかはどこで確認？</summary>
+    <p>当日10時から自動音声案内（050-3665-9671）で確認できます。荒天の場合は8/9(日)に順延、9日も開催できない場合は中止です。<a href="https://www.oideyo-kumagaya.com/" target="_blank" rel="noopener">熊谷観光局サイト</a>と合わせて確認してください。順延時は駐車券の予約は自動で有効になります。</p>
+  </details>
+  <details>
+    <summary>体の不自由な家族がいます。近くに停められる？</summary>
+    <p>第1公式有料駐車場のA区画に「思いやり駐車場」があります。障害者手帳等の提示で利用でき予約は不要ですが、台数限定のため満車時は利用できません。早めの到着が安心です。</p>
+  </details>
+  <details>
+    <summary>自転車・バイクで行く場合は？</summary>
+    <p>自転車：会場周辺への乗り入れは控えるよう公式が案内しています。駐輪場は熊谷市役所本庁舎の西側駐車場内です。バイク：第1公式有料駐車場に1台1,000円(現金)で駐車できます。</p>
+  </details>
+  <details>
+    <summary>会場のすぐ近くまで車で送迎できる？</summary>
+    <p>おすすめしません。16時以降は会場周辺が広範囲で通行止めになり、河川敷の会場付近は一般車進入禁止です。送迎は規制エリア外（市街地北側など）で乗降し、徒歩または「お帰りロード」動線を使うのが現実的です。</p>
+  </details>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <h4>出典・公式情報（最終確認：2026年8月8日 昼）</h4>
+    <ul>
+      <li>🏛 <a href="https://www.city.kumagaya.lg.jp/kanko/matsuri/kumagayahanabitaikai/index.html" target="_blank" rel="noopener">熊谷市公式「熊谷花火大会」ページ</a>（臨時駐車場一覧・各種PDF）</li>
+      <li>🎇 <a href="https://www.oideyo-kumagaya.com/%E7%AC%AC74%E5%9B%9E%E7%86%8A%E8%B0%B7%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A/" target="_blank" rel="noopener">熊谷観光局「第74回熊谷花火大会」</a>／<a href="https://www.oideyo-kumagaya.com/cate-info/20939/" target="_blank" rel="noopener">お車でお越しの方へ</a>／<a href="https://www.oideyo-kumagaya.com/cate-info/21749/" target="_blank" rel="noopener">公式有料駐車場のご利用について</a></li>
+      <li>📄 <a href="https://www.city.kumagaya.lg.jp/kanko/matsuri/kumagayahanabitaikai/index.files/R8koutuukisei.pdf" target="_blank" rel="noopener">第74回熊谷花火大会 交通規制図（PDF）</a></li>
+      <li>🅿️ <a href="https://www.akippa.com/event/kumagayahanabi" target="_blank" rel="noopener">akippa 公式駐車券販売サイト</a>（空き状況・予約）</li>
+      <li>🗺 地図・コインパーキング参考：<a href="https://times-info.net/P11-saitama/line/L5600/S2016/" target="_blank" rel="noopener">タイムズ</a>／<a href="https://www.repark.jp/parking_user/time/result/detail/?park=REP0020820" target="_blank" rel="noopener">三井のリパーク</a>／<a href="https://www.navitime.co.jp/parking/around/?node=00062583" target="_blank" rel="noopener">NAVITIME</a>／OpenStreetMap</li>
+      <li>☎️ 問い合わせ：一般社団法人熊谷市観光協会 048-594-6677（平日8:30–17:15）／開催可否 <a class="tel" href="tel:05036659671" style="padding:4px 10px;font-size:13px">📞 050-3665-9671（当日10時〜）</a></li>
+    </ul>
+    <div class="disc">
+      <b>免責事項：</b>本ページは2026年8月8日時点の公式発表・地図情報をもとに個人が整理した非公式のまとめです。駐車場の空き状況・料金・交通規制は当日の状況により変わります。必ず現地の案内・警察官・警備員の指示、および公式サイトの最新情報を優先してください。掲載施設への直接の問い合わせはご遠慮ください。
+    </div>
+    <p style="margin-top:14px">🎆 第74回熊谷花火大会 駐車場ガイド ─ よい花火の夜を。</p>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="クイックナビゲーション">
+  <a href="#now" data-spy="now"><span class="i">⏰</span>いま</a>
+  <a href="#list" data-spy="list"><span class="i">🅿️</span>駐車場</a>
+  <a href="#map-sec" data-spy="map-sec"><span class="i">🗺</span>マップ</a>
+  <a href="#kisei" data-spy="kisei"><span class="i">🚧</span>規制</a>
+  <a href="#tips" data-spy="tips"><span class="i">💡</span>対策</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+"use strict";
+
+/* ---------- stars ---------- */
+(function(){
+  var wrap=document.getElementById('stars');if(!wrap)return;
+  for(var i=0;i<42;i++){var s=document.createElement('i');
+    s.style.left=(Math.random()*100)+'%';s.style.top=(Math.random()*100)+'%';
+    s.style.animationDelay=(Math.random()*4)+'s';wrap.appendChild(s);}
+})();
+
+/* ---------- countdown & phase ---------- */
+(function(){
+  var $v=document.getElementById('cd-value'),$l=document.getElementById('cd-label'),
+      $t=document.getElementById('live-text');
+  // JSTの固定時刻（UTCエポック）
+  var T=function(h,m){return Date.UTC(2026,7,8,h-9,m||0,0);}; // 8/8 JST
+  var START=T(19,0),END=T(21,0),GATE=T(13,0),KISEI=T(16,0),CLOSE=T(22,30),
+      NEXTDAY_END=Date.UTC(2026,7,9,21-9,0,0);
+  var pad=function(n){return (n<10?'0':'')+n;};
+  function fmt(ms){
+    var s=Math.max(0,Math.floor(ms/1000)),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),ss=s%60;
+    return pad(h)+':'+pad(m)+':'+pad(ss);
+  }
+  function tick(){
+    var now=Date.now();
+    if(now<START){
+      $l.textContent='打上開始（19:00）まで';$v.textContent=fmt(START-now);
+      if($t){
+        if(now<GATE)$t.innerHTML='<b>公式駐車場の開場は13:00。</b>開催可否は自動音声 050-3665-9671（10時〜）で確認できます。';
+        else if(now<KISEI)$t.innerHTML='<b>公式駐車場は開場中（〜20:00入場）。</b>16時から会場周辺の交通規制が始まります。早めの入庫を。';
+        else $t.innerHTML='<b>会場周辺の交通規制が始まっています（〜22:00）。</b>公式駐車場の入場は20:00まで。市街地Pか電車への切替も検討を。';
+      }
+    }else if(now<END){
+      $l.textContent='🎆 打上中！ 終演（21:00）まで';$v.textContent=fmt(END-now);
+      if($t)$t.innerHTML='<b>打上中です。</b>公式駐車場の出庫は20:00から。周辺は退場方向の一方通行に切り替わっています。';
+    }else if(now<CLOSE){
+      $l.textContent='退場・規制終了（22:30）まで';$v.textContent=fmt(CLOSE-now);
+      if($t)$t.innerHTML='<b>終演しました。お気をつけて。</b>熊谷駅へは「お帰りロード」経由で北口へ。出庫ピークを避けるなら少し待つのが吉。';
+    }else if(now<NEXTDAY_END){
+      $l.textContent='本日の日程は終了';$v.textContent='ありがとうございました';$v.style.fontSize='22px';
+      if($t)$t.innerHTML='<b>8/8の日程は終了しました。</b>荒天順延となった場合は8/9(日)に開催されます。公式発表を確認してください。';
+    }else{
+      $l.textContent='第74回 熊谷花火大会';$v.textContent='開催終了';$v.style.fontSize='26px';
+      if($t)$t.innerHTML='<b>第74回熊谷花火大会は終了しました。</b>本ページは2026年開催時の記録です。来年の情報は公式サイトへ。';
+    }
+  }
+  tick();setInterval(tick,1000);
+
+  /* timeline now-marker */
+  var items=document.querySelectorAll('#timeline li');
+  function nowHM(){
+    var p=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date());
+    return parseInt(p.replace(':',''),10);
+  }
+  function mark(){
+    var hm=nowHM(),cur=-1;
+    var today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo'}).format(new Date());
+    items.forEach(function(li){li.classList.remove('now');});
+    if(today!=='2026-08-08')return;
+    items.forEach(function(li,i){if(hm>=parseInt(li.dataset.t,10))cur=i;});
+    if(cur>=0)items[cur].classList.add('now');
+  }
+  mark();setInterval(mark,30000);
+})();
+
+/* ---------- filter chips ---------- */
+(function(){
+  var chips=document.querySelectorAll('.chip'),lots=document.querySelectorAll('.lot');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.remove('on');});c.classList.add('on');
+    var f=c.dataset.f;
+    lots.forEach(function(l){l.classList.toggle('hide',f!=='all'&&l.dataset.cat!==f);});
+  });});
+})();
+
+/* ---------- scrollspy ---------- */
+(function(){
+  var links=document.querySelectorAll('[data-spy]');
+  var secs=['now','list','city','coin','map-sec','kisei','tips'].map(function(id){return document.getElementById(id);}).filter(Boolean);
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        var id=e.target.id;
+        links.forEach(function(a){a.classList.toggle('on',a.dataset.spy===id);});
+      }
+    });
+  },{rootMargin:'-30% 0px -60% 0px'});
+  secs.forEach(function(s){io.observe(s);});
+})();
+
+/* ---------- map (lazy init) ---------- */
+(function(){
+  var inited=false,el=document.getElementById('map');
+  var SPOTS=[
+    {n:'打上場所（荒川河畔・荒川大橋下流）',c:[36.1352,139.3822],col:'#ff6d5e',ic:'🎆',d:'19:00–21:00 打上。河川敷会場付近は一般車進入禁止',nav:null},
+    {n:'会場入口の目安（荒川公園側）',c:[36.1367,139.3850],col:'#ff6d5e',ic:'⛩',d:'熊谷駅南口から徒歩約5分。観覧は左岸河川敷',nav:null},
+    {n:'第1公式有料駐車場',c:[36.1390,139.3718],col:'#ffc857',ic:'P1',d:'akippa予約制 3,000円／入場13:00-20:00／出庫20:00-22:30／会場まで徒歩約20分',nav:'36.1390,139.3718'},
+    {n:'第2公式有料駐車場',c:[36.1316,139.3730],col:'#ffc857',ic:'P2',d:'akippa予約制(本日完売)／荒川大橋南端左折→500mで土手越え／徒歩約35分',nav:'36.1316,139.3730'},
+    {n:'熊谷地方庁舎駐車場（臨時開放）',c:[36.1434,139.3955],col:'#5eea9b',ic:'P',d:'8:30-22:00 無料開放／徒歩約15-20分',nav:'埼玉県熊谷地方庁舎'},
+    {n:'熊谷市役所駐車場（臨時開放）',c:[36.1472,139.3890],col:'#5eea9b',ic:'P',d:'17:15-22:30 無料開放・混雑予想／駐輪場は本庁舎西側',nav:'熊谷市役所'},
+    {n:'八木橋百貨店駐車場（臨時開放）',c:[36.1460,139.3820],col:'#5eea9b',ic:'P',d:'19:00-22:00 無料開放',nav:'八木橋百貨店'},
+    {n:'イオン熊谷駐車場（臨時開放）',c:[36.1455,139.3788],col:'#5eea9b',ic:'P',d:'19:00-22:00 無料開放',nav:'イオン熊谷店'},
+    {n:'市営本町駐車場',c:[36.1444,139.3846],col:'#7db3ff',ic:'¥',d:'7:00-24:00 有料／公式が案内する市街地駐車場（位置は目安）',nav:'熊谷市営本町駐車場'},
+    {n:'ティアラ21駐車場',c:[36.1398,139.3914],col:'#7db3ff',ic:'¥',d:'24時間 有料（参考:60分200円/24h最大600円）／熊谷駅東側直結',nav:'ティアラ21 熊谷'},
+    {n:'熊谷駅（南口が会場側）',c:[36.1402,139.3900],col:'#c9d4f6',ic:'🚉',d:'JR高崎線・新幹線・秩父鉄道。南口→会場 徒歩約5分',nav:null},
+    {n:'上熊谷駅（秩父鉄道）',c:[36.1426,139.3813],col:'#c9d4f6',ic:'🚉',d:'第1公式駐車場まで徒歩約8分',nav:null}
+  ];
+  function init(){
+    if(inited||typeof L==='undefined')return;inited=true;
+    var map=L.map('map',{scrollWheelZoom:false}).setView([36.1398,139.3838],14);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.circle([36.1358,139.3825],{radius:600,color:'#ff6d5e',weight:1.6,dashArray:'6 7',fillColor:'#ff6d5e',fillOpacity:.07})
+      .addTo(map).bindPopup('<b>交通規制エリアの目安</b><br>会場周辺は最大16:00–22:00車両通行止め。<br>正確な範囲は公式規制図PDFを確認してください。');
+    SPOTS.forEach(function(s){
+      var big=s.ic.length>1&&s.ic[0]==='P'&&s.ic.length===2;
+      var icon=L.divIcon({className:'',html:'<div class="dmark" style="width:'+(big?30:26)+'px;height:'+(big?30:26)+'px;background:'+s.col+';color:#111;font-weight:900;font-size:'+(big?11:13)+'px">'+s.ic+'</div>',iconSize:[big?30:26,big?30:26],iconAnchor:[big?15:13,big?15:13]});
+      var html='<b>'+s.n+'</b><br>'+s.d;
+      if(s.nav){
+        var dest=/^[0-9.,]+$/.test(s.nav)?s.nav:encodeURIComponent(s.nav);
+        html+='<br><a href="https://www.google.com/maps/dir/?api=1&destination='+dest+'&travelmode=driving" target="_blank" rel="noopener">🧭 Googleマップでナビ</a>';
+      }
+      L.marker(s.c,{icon:icon,title:s.n}).addTo(map).bindPopup(html);
+    });
+  }
+  if(location.hash==='#map-sec'){init();}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){init();io.disconnect();}});},{rootMargin:'300px'});
+    io.observe(el);
+  }else{init();}
+  document.querySelectorAll('a[href="#map-sec"]').forEach(function(a){a.addEventListener('click',init);});
+  window.addEventListener('load',function(){setTimeout(function(){
+    var r=el.getBoundingClientRect();if(r.top<window.innerHeight+300)init();
+  },400);});
+})();
+</script>
+</body>
+</html>
